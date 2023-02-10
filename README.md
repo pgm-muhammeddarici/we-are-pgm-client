@@ -13,7 +13,7 @@ Download de startcode van de frontend uit deze Github Repository.
 Ontwikkel een script dat alle studenten ophaalt via een `GET`-request uit de API via volgend endpoint.
 
 ```
-API_URL     https://we-are-pgm.herokuapp.com
+API_URL     https://pgm.cmsdevelopment.be/api
   POST /student -> bewaren van een student
   GET /student -> haalt studenten op
 ```
@@ -38,7 +38,7 @@ Maak een JSON-object aan waarin alle interessante details over jezelf in aanwezi
 Schrijf een script (welke je later uitvoert via `node.js`) waarbij je deze JSON via een `POST`-request verstuurt naar volgende `API`
 
 ```
-API_URL     https://we-are-pgm.herokuapp.com
+API_URL     https://pgm.cmsdevelopment.be/api
   POST /student -> bewaren van een student
   GET /student -> haalt studenten op
 ```
