@@ -22,14 +22,17 @@
     </header>
     <main class="students">
       <article class="student" style="background-image: url('./images/avatars/avatar_2.jpeg')">
-        <h2 class="student__name">Matteo Simoni</h2>
+        <h2 class="student__name">Harley Davidson</h2>
         <div class="student__info">
-          <h3>Stielmanteo</h3>
-          <p>Houdt van reizen, boeken lezen en timmeren</p>
+          <h3>Harley Davidson</h3>
+          <em class="caption">Heaven's angel</em>
+          <p>Houdt van motorijden, boeken lezen en timmeren</p>
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam ullam hic maxime, optio tenetur dolorum, perferendis odio labore libero atque
             officiis commodi ad itaque exercitationem nam laudantium eum corporis placeat.
           </p>
+          <h4>Levensmotto</h4>
+          <blockquote>Mijn motto? Ah, nen harley natuurlijk</blockquote>
         </div>
       </article>
     </main>
@@ -52,5 +55,41 @@
       </script>
       - Artevelde University College Ghent - Frederick Roegiers &amp; Tim De Paepe
     </footer>
+    <div class="background gradient-2"></div>
+
+    <script>
+      const $mouse = document.querySelector('.mouse');
+      const $background = document.querySelector('.background');
+      const $links = document.querySelectorAll('a')
+
+      // Animate mouse when hover a link
+      $links.forEach(link => {
+        link.addEventListener('mouseenter', e => {
+          $mouse.classList.add('is--onlink');
+        });
+        link.addEventListener('mouseout', e => {
+          $mouse.classList.remove('is--onlink');
+        });
+      });
+
+      // Mouse Listener
+      window.addEventListener('mousemove', (ev) => {
+        let xPos = ev.clientX;
+        let yPos = ev.clientY;
+
+        moveBackgroundToPosition(xPos, yPos);
+      });
+
+      const moveBackgroundToPosition = (x, y) => {
+        // $mouse.style.left = `${x}px`;
+        // $mouse.style.top = `${y}px`;
+        const w = document.body.clientWidth;
+        const a = (x - w / 2) * 2 / w;
+
+        $background.style.background = 
+        `radial-gradient(100% 225% at 100% 0%, var(--color-ahs_green-300) 0%, #000000 100%), linear-gradient(${235 - 6 * a}deg, var(--color-ahs_pink-300) 0%, #000000 100%), linear-gradient(${45 + 6 * a}deg, var(--color-ahs_purple-800) 0%, var(--color-ahs_purple-800) 40%, var(--color-ahs_purple-600) 40%, var(--color-ahs_purple-600) 50%, var(--color-ahs_purple-400) 50%, var(--color-ahs_purple-400) 70%, var(--color-ahs_purple-200) 70%, var(--color-ahs_purple-200) 100%), linear-gradient(${180 - 6 * a}deg, var(--color-ahs_pink-800) 0%, var(--color-ahs_pink-800) 43%, var(--color-ahs_pink-700) 43%, var(--color-ahs_pink-700) 62%, var(--color-ahs_pink-500) 62%, var(--color-ahs_pink-500) 80%, var(--color-ahs_pink-200) 80%, var(--color-ahs_pink-200) 100%)`;
+      }
+
+    </script>
   </body>
 </html>
