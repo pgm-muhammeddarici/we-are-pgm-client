@@ -17,7 +17,7 @@ API_URL     https://pgm.cmsdevelopment.be/api
 **of je kan tijdelijk met superhelden werken, zolang er nog geen studenten zijn**
 ```
 API_URL     https://pgm.cmsdevelopment.be/api
-  GET /superhero -> haalt studenten op
+  GET /superhero -> haalt superhelden op
 ```
 
 Breng de gegevens van de studenten in de DOM. Er staat al één voorbeeldje in `index.html` hoe een volledig student-element opgebouwd is.
@@ -50,5 +50,5 @@ API_URL     https://pgm.cmsdevelopment.be/api
 **SUPERHELDEN**
 ```
 API_URL     https://pgm.cmsdevelopment.be/api
-  GET /superhero -> haalt studenten op
+  GET /superhero -> haalt superhelden op
 ```
