@@ -232,7 +232,7 @@ h4 {
   width: auto;
   padding: 1rem;
   color: var(--color-white);
-  background: var(--color-ahs__pink-200);
+  background: var(--color-ahs_pink-200);
   text-align: right;
 }
 
@@ -242,7 +242,7 @@ h4 {
   position: absolute;
   bottom: 0;
   margin-bottom: 100%;
-  background: var(--color-ahs__pink-200);
+  background: var(--color-ahs_pink-200);
   padding: 2rem;
   transition-duration: 0.4s;
   color: var(--color-white);
