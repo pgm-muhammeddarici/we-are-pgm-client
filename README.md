@@ -23,7 +23,7 @@ API_URL     https://pgm.cmsdevelopment.be/api
   GET /superhero -> haalt superhelden op
 ```
 
-Breng de gegevens van de studenten in de DOM. Er staat al één voorbeeldje in `index.html` hoe een volledig student-element opgebouwd is.
+Breng de gegevens van de studenten (of tijdelijk superheroes) in de DOM. Er staat al één voorbeeldje in `index.html` hoe een volledig student-element opgebouwd is.
 
 ## Creatie van een student
 
@@ -63,7 +63,7 @@ vb van een mogelijk JSON-object
   "nickname": "JD",
 }
 ``` 
-# Verwijderen van een student
+## Verwijderen van een student
 
 Maak een script aan dat een `DELETE`-request uitvoert naar de API. De UUID steek je in de URL.
 
