@@ -1,9 +1,9 @@
 # We are PGM
 
-**PGM-a en PGM-b becomes one 💪.**  
+**PGM evolves.**  
 _Dat verdient een stevige introductie, en hoe kunnen we dat beter aanpakken dat data-gewijs een webpage vullen._
 
-### Data ophalen en presenteren
+### CRUD van studenten
 
 Ontwikkel een script dat alle studenten ophaalt via een `GET`-request uit de API via volgend endpoint.
 
@@ -16,7 +16,8 @@ API_URL     https://pgm.cmsdevelopment.be/api
 ```
 
 
-**of je kan tijdelijk met superhelden werken, zolang er nog geen studenten zijn**
+Om data op te hamen, kan je tijdelijk met superhelden werken, zolang er nog geen studenten zijn.
+
 ```
 API_URL     https://pgm.cmsdevelopment.be/api
   GET /superhero -> haalt superhelden op
@@ -24,7 +25,9 @@ API_URL     https://pgm.cmsdevelopment.be/api
 
 Breng de gegevens van de studenten in de DOM. Er staat al één voorbeeldje in `index.html` hoe een volledig student-element opgebouwd is.
 
-### Jouw data sturen
+## Creatie van een student
+
+Maak een script aan dat een `POST`-request uitvoert naar de API. De request moet een JSON-object bevatten met de gegevens van de student. De API zal een `UUID` teruggeven die je kan gebruiken om de student later te updaten of te verwijderen.
 
 Maak een JSON-object aan waarin alle interessante details over jezelf in aanwezig zijn. De JSON moet minstens volgende informatie bevatten
 
@@ -41,20 +44,6 @@ Maak een JSON-object aan waarin alle interessante details over jezelf in aanwezi
 
 Schrijf een script (welke je later uitvoert via `node.js`) waarbij je deze JSON via een `POST`-request verstuurt naar volgende `API`
 
-
-## Studenten API
-
-```
-API_URL     https://pgm.cmsdevelopment.be/api
-  GET /student -> haalt studenten op
-  POST /student -> bewaren van een student
-  PUT /student/{UUID} -> updaten van een student
-  DELETE /student/{UUID} -> verwijderen van een student
-```
-
-## Creatie van een student
-
-Maak een script aan dat een `POST`-request uitvoert naar de API. De request moet een JSON-object bevatten met de gegevens van de student. De API zal een `UUID` teruggeven die je kan gebruiken om de student later te updaten of te verwijderen.
 
 ## Updaten van een student
 
