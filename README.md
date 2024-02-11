@@ -27,6 +27,8 @@ API_URL     https://pgm.cmsdevelopment.be/api
 ```
 *Ter info, deze superhero API heeft enkel een `GET`-request.*
 
+#### Weergave van studenten
+
 Breng de gegevens van de studenten (of tijdelijk superheroes) in de DOM. Er staat al één voorbeeldje in `index.html` hoe een volledig student-element opgebouwd is.
 
 ## Creatie van een student
@@ -48,6 +50,9 @@ Maak een JSON-object aan waarin alle interessante details over jezelf in aanwezi
 
 Schrijf een script (welke je later uitvoert via `node.js`) waarbij je deze JSON via een `POST`-request verstuurt naar volgende `API`
 
+### Maak het formulier functioneel
+
+Onderaan de pagina staat een formulier. Maak dit formulier functioneel zodat je via de webpagina een student kan toevoegen. De gegevens van de student moeten via een `POST`-request naar de API gestuurd worden.
 
 ## Updaten van een student
 
@@ -76,7 +81,3 @@ vb van een mogelijke endpoint
 DELETE /student/{UUID} -> verwijderen van een student
 vb: DELETE https://pgm.cmsdevelopment.be/api/student/1234-5678-91011-1213
 ```
-
-### Maak het formulier functioneel
-
-Onderaan de pagina staat een formulier. Maak dit formulier functioneel zodat je via de webpagina een student kan toevoegen. De gegevens van de student moeten via een `POST`-request naar de API gestuurd worden.
