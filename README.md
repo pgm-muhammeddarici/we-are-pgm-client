@@ -3,9 +3,9 @@
 **PGM evolves.**  
 _Dat verdient een stevige introductie, en hoe kunnen we dat beter aanpakken dat data-gewijs een webpage vullen._
 
-### CRUD van studenten
+## CRUD van studenten
 
-Ontwikkel een script dat alle studenten ophaalt via een `GET`-request uit de API via volgend endpoint.
+Deze endpoints bestaan in de studenten API van Graduaat Programmeren.
 
 ```
 API_URL     https://pgm.cmsdevelopment.be/api
@@ -15,13 +15,16 @@ API_URL     https://pgm.cmsdevelopment.be/api
   DELETE /student/{UUID} -> verwijderen van een student
 ```
 
+### Ophalen van studenten (of superhelden)
 
+Ontwikkel een script dat alle studenten ophaalt via een `GET`-request uit de API via volgend endpoint.
 Om data op te hamen, kan je tijdelijk met superhelden werken, zolang er nog geen studenten zijn.
 
 ```
 API_URL     https://pgm.cmsdevelopment.be/api
   GET /superhero -> haalt superhelden op
 ```
+*Ter info, deze superhero API heeft enkel een `GET`-request.*
 
 Breng de gegevens van de studenten (of tijdelijk superheroes) in de DOM. Er staat al één voorbeeldje in `index.html` hoe een volledig student-element opgebouwd is.
 
@@ -73,12 +76,6 @@ DELETE /student/{UUID} -> verwijderen van een student
 vb: DELETE https://pgm.cmsdevelopment.be/api/student/1234-5678-91011-1213
 ```
 
-# Superhelden API
+### Maak het formulier functioneel
 
-Deze heeft enkel een `GET`-request nodig, en kan je gebruiken om je script te testen.
-
-**SUPERHELDEN**
-```
-API_URL     https://pgm.cmsdevelopment.be/api
-  GET /superhero -> haalt superhelden op
-```
+Onderaan de pagina staat een formulier. Maak dit formulier functioneel zodat je via de webpagina een student kan toevoegen. De gegevens van de student moeten via een `POST`-request naar de API gestuurd worden.
