@@ -23,6 +23,7 @@ Om data op te hamen, kan je tijdelijk met superhelden werken, zolang er nog geen
 ```
 API_URL     https://pgm.cmsdevelopment.be/api
   GET /superhero -> haalt superhelden op
+  GET /student -> haalt studenten op
 ```
 *Ter info, deze superhero API heeft enkel een `GET`-request.*
 
