@@ -6,7 +6,10 @@
     <title>We are PGM...</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,300;1,700&family=Staatliches&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,300;1,700&family=Staatliches&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
@@ -20,19 +23,74 @@
         <div class="hero__dots"><span>.</span><span>.</span><span>.</span></div>
       </h1>
     </header>
-    <main class="students">
-      
-    </main>
+    <main class="students"></main>
     <aside class="addMore">
       <button id="addme">Voeg voorgedefinieerde student toe</button>
-
       <h3>Sta je er niet tussen?</h3>
       <p>Niet getreurd! Voeg jezelf gewoon weer toe</p>
       <form action="" id="studentForm">
-        
-        <p>@TODO: formulier toevoegen</p>
-        <button type="submit">Voeg toe</button>
-        
+        <div class="input__container grid-column-6">
+          <label for="input__field two-column">First Name</label>
+          <input type="text" id="input__field" name="firstname" />
+        </div>
+        <div class="input__container grid-column-6">
+          <label for="input__field">Last Name</label>
+          <input type="text" id="input__field" name="lastname" />
+        </div>
+        <div class="input__container grid-column-4">
+          <label for="input__field">Nickname</label>
+          <input type="text" id="input__field" name="nickname" />
+        </div>
+        <div class="input__container grid-column-4">
+          <label for="input__field">Class Name</label>
+          <select name="classname">
+            <option value="1PGM-A">1PGM-A</option>
+            <option value="1PGM-B">1PGM-B</option>
+            <option value="1PGM-C">1PGM-C</option>
+          </select>
+        </div>
+        <div class="input__container grid-column-4">
+          <label for="input__field">Age</label>
+          <input
+            type="number"
+            id="input__field"
+            max="50"
+            min="15"
+            placeholder="15"
+            name="age"
+          />
+        </div>
+        <div class="input__container grid-column-12">
+          <label for="input__field">E-mail</label>
+          <input
+            type="email"
+            id="input__field"
+            name="email"
+            placeholder="info@wearepgm.be"
+          />
+        </div>
+        <div class="input__container grid-column-12">
+          <label for="input__field">Avatar (https://postimg.cc/ URL)</label>
+          <input type="text" id="input__field" name="avatar" />
+        </div>
+        <div class="input__container grid-column-12">
+          <label for="input__field">Motto</label>
+          <input type="text" id="input__field" name="motto" />
+        </div>
+        <div class="input__container grid-column-12">
+          <label for="input__field">Hobbies</label>
+          <input
+            type="text"
+            id="input__field"
+            name="hobbies"
+            placeholder="voetbal, fietsen, dansen"
+          />
+        </div>
+        <div class="input__container grid-column-12">
+          <label for="input__field">About</label>
+          <textarea id="input__field" name="about" rows="7"></textarea>
+        </div>
+        <button type="submit" class="grid-column-4">Voeg toe</button>
       </form>
     </aside>
     <footer>
@@ -40,27 +98,28 @@
       <script>
         document.write(new Date().getFullYear());
       </script>
-      - Artevelde University College Ghent - Frederick Roegiers &amp; Tim De Paepe
+      - Artevelde University College Ghent - Frederick Roegiers &amp; Tim De
+      Paepe
     </footer>
     <div class="background gradient-2"></div>
 
     <script>
-      const $mouse = document.querySelector('.mouse');
-      const $background = document.querySelector('.background');
-      const $links = document.querySelectorAll('a')
+      const $mouse = document.querySelector(".mouse");
+      const $background = document.querySelector(".background");
+      const $links = document.querySelectorAll("a");
 
       // Animate mouse when hover a link
-      $links.forEach(link => {
-        link.addEventListener('mouseenter', e => {
-          $mouse.classList.add('is--onlink');
+      $links.forEach((link) => {
+        link.addEventListener("mouseenter", (e) => {
+          $mouse.classList.add("is--onlink");
         });
-        link.addEventListener('mouseout', e => {
-          $mouse.classList.remove('is--onlink');
+        link.addEventListener("mouseout", (e) => {
+          $mouse.classList.remove("is--onlink");
         });
       });
 
       // Mouse Listener
-      window.addEventListener('mousemove', (ev) => {
+      window.addEventListener("mousemove", (ev) => {
         let xPos = ev.clientX;
         let yPos = ev.clientY;
 
@@ -71,12 +130,16 @@
         // $mouse.style.left = `${x}px`;
         // $mouse.style.top = `${y}px`;
         const w = document.body.clientWidth;
-        const a = (x - w / 2) * 2 / w;
+        const a = ((x - w / 2) * 2) / w;
 
-        $background.style.background = 
-        `radial-gradient(100% 225% at 100% 0%, var(--color-ahs_green-300) 0%, #000000 100%), linear-gradient(${235 - 6 * a}deg, var(--color-ahs_pink-300) 0%, #000000 100%), linear-gradient(${45 + 6 * a}deg, var(--color-ahs_purple-800) 0%, var(--color-ahs_purple-800) 40%, var(--color-ahs_purple-600) 40%, var(--color-ahs_purple-600) 50%, var(--color-ahs_purple-400) 50%, var(--color-ahs_purple-400) 70%, var(--color-ahs_purple-200) 70%, var(--color-ahs_purple-200) 100%), linear-gradient(${180 - 6 * a}deg, var(--color-ahs_pink-800) 0%, var(--color-ahs_pink-800) 43%, var(--color-ahs_pink-700) 43%, var(--color-ahs_pink-700) 62%, var(--color-ahs_pink-500) 62%, var(--color-ahs_pink-500) 80%, var(--color-ahs_pink-200) 80%, var(--color-ahs_pink-200) 100%)`;
-      }
-
+        $background.style.background = `radial-gradient(100% 225% at 100% 0%, var(--color-ahs_green-300) 0%, #000000 100%), linear-gradient(${
+          235 - 6 * a
+        }deg, var(--color-ahs_pink-300) 0%, #000000 100%), linear-gradient(${
+          45 + 6 * a
+        }deg, var(--color-ahs_purple-800) 0%, var(--color-ahs_purple-800) 40%, var(--color-ahs_purple-600) 40%, var(--color-ahs_purple-600) 50%, var(--color-ahs_purple-400) 50%, var(--color-ahs_purple-400) 70%, var(--color-ahs_purple-200) 70%, var(--color-ahs_purple-200) 100%), linear-gradient(${
+          180 - 6 * a
+        }deg, var(--color-ahs_pink-800) 0%, var(--color-ahs_pink-800) 43%, var(--color-ahs_pink-700) 43%, var(--color-ahs_pink-700) 62%, var(--color-ahs_pink-500) 62%, var(--color-ahs_pink-500) 80%, var(--color-ahs_pink-200) 80%, var(--color-ahs_pink-200) 100%)`;
+      };
     </script>
     <script src="./scripts/app.js"></script>
   </body>
