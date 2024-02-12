@@ -32,7 +32,7 @@ const createStudent = async () => {
     body: JSON.stringify(myself), // de gegevens
   });
 
-  const newStudent = response.json();
+  const newStudent = await response.json();
   return newStudent;
 };
 
