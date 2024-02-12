@@ -21,12 +21,27 @@ const myself = {
 // function to post student to the API
 const createStudent = async () => {
   console.log("todo: post student");
+
+  const response = await fetch(API_URL, {
+    method: "POST", // soort request
+    headers: {
+      // headers
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+    body: JSON.stringify(myself), // de gegevens
+  });
+
+  const newStudent = response.json();
+  return newStudent;
 };
 
 // initialisation
 const init = async () => {
   // create a student
-  createStudent();
+  const student = createStudent();
+  // log in console
+  console.log(student);
 };
 
 // start the application
