@@ -25,29 +25,22 @@ const createDOMSuperheroes = (superheroes) => {
   // log in console
   console.log(superheroes);
 
-  const superHeroesDOM = superheroes.map(superhero => {
-
+  const superHeroesDOM = superheroes.map((superhero) => {
+    return `<article class="student" style="background-image: url('${superhero.avatar}')">
+        <h2 class="student__name">${superhero.firstname} ${superhero.lastname}</h2>
+        <div class="student__info">
+            <h3>${superhero.firstname} ${superhero.lastname}</h3>
+            <em class="caption">${superhero.nickname}</em>
+            <p>Houdt van ${superhero.hobbies}</p>
+            <p>${superhero.about}</p>
+            <h4>Levensmotto</h4>
+            <blockquote>${superhero.motto}</blockquote>
+        </div>
+    </article>`;
   });
 
-  const article = ` <article class="student" style="background-image: url('./images/avatars/avatar_2.jpeg')">
-            <h2 class="student__name">Almost Breaktime</h2>
-            <div class="student__info">
-            <h3>Harley Davidson</h3>
-            <em class="caption">Heaven's angel</em>
-            <p>Houdt van motorijden, boeken lezen en timmeren</p>
-            <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam
-                ullam hic maxime, optio tenetur dolorum, perferendis odio labore
-                libero atque officiis commodi ad itaque exercitationem nam
-                laudantium eum corporis placeat.
-            </p>
-            <h4>Levensmotto</h4>
-            <blockquote>Mijn motto? Ah, nen harley natuurlijk</blockquote>
-            </div>
-        </article>`;
-
   // set content of main wrapper to html article
-  mainWrapper.innerHTML = article;
+  mainWrapper.innerHTML = superHeroesDOM.join("");
 };
 
 // fetch data
