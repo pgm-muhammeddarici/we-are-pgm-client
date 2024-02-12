@@ -9,5 +9,8 @@
     "start": "node src/app.js"
   },
   "author": "Frederick Roegiers",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
 }

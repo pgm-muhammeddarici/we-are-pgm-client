@@ -1,4 +1,5 @@
-console.log("Hello World!");
+// imports
+import fetch from "node-fetch";
 
 // declaration of the API URL
 const API_URL = "https://pgm.cmsdevelopment.be/api/student";
