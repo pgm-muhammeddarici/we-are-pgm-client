@@ -19,8 +19,6 @@ const myself = {
 
 // function to post student to the API
 const createStudent = async () => {
-  console.log("todo: post student");
-
   const response = await fetch(API_URL, {
     method: "POST", // soort request
     headers: {
