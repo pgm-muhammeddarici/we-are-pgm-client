@@ -1,5 +1,5 @@
 const API_URL = "https://pgm.cmsdevelopment.be/api/";
-const ENTITY = "superhero";
+const ENTITY = "student";
 
 // full url
 const API_URL_FULL = API_URL + ENTITY;
