@@ -34,7 +34,7 @@ const createStudent = async () => {
 };
 
 // declaration of the student, so we can update it later on
-const uuid = "584f2a94-ac32-4be7-906c-57e86e57c1d8";
+const uuid = "ec324d53-a7f0-436c-be79-2ba120a97c7a";
 
 // code to update a student
 const updateStudent = async () => {
