@@ -33,7 +33,6 @@ const createStudent = async () => {
   return newStudent;
 };
 
-
 // declaration of the student, so we can update it later on
 const uuid = "44e05735-bdcc-43a3-954b-c8260a6e9c20";
 
@@ -53,17 +52,17 @@ const updateStudent = async () => {
   });
 
   const updatedStudent = await response.json();
-  console.log(updatedStudent);
+  return updatedStudent;
 };
 
 // initialisation
 const init = async () => {
   // create a student
   // const student = await createStudent();
-  // log in console
   // console.log(student);
 
-  updateStudent();
+  const updated = await updateStudent();
+  console.log(updated);
 };
 
 // start the application
