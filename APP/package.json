@@ -1,0 +1,16 @@
+{
+  "name": "we-are-pgm",
+  "version": "1.0.0",
+  "description": "Node app to CRUD students",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js"
+  },
+  "author": "darc",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
+}
