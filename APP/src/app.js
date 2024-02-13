@@ -4,6 +4,9 @@ import fetch from "node-fetch";
 // declaration of the API URL
 const API_URL = "https://pgm.cmsdevelopment.be/api/student";
 
+// declaration of the student, so we can update it later on
+const uuid = "44e05735-bdcc-43a3-954b-c8260a6e9c20";
+
 const myself = {
   firstname: "Frederick",
   lastname: "Roegiers",
@@ -33,12 +36,32 @@ const createStudent = async () => {
   return newStudent;
 };
 
+const updateStudent = async () => {
+  const updates = {
+    age: 32,
+    firstname: "Robin2",
+  };
+  const response = await fetch(API_URL + "/" + uuid, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+    body: JSON.stringify(updates),
+  });
+
+  const updatedStudent = await response.json();
+  console.log(updatedStudent);
+};
+
 // initialisation
 const init = async () => {
   // create a student
-  const student = await createStudent();
+  // const student = await createStudent();
   // log in console
-  console.log(student);
+  // console.log(student);
+
+  updateStudent();
 };
 
 // start the application
