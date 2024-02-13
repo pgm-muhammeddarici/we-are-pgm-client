@@ -65,7 +65,7 @@ const deleteStudent = async () => {
     method: "DELETE",
   });
   const deletedStudent = await response.json();
-  return deleteStudent;
+  return deletedStudent;
 };
 
 // initialisation
