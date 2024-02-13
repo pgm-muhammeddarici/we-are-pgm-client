@@ -9,7 +9,7 @@ const myself = {
   lastname: "Roegiers",
   nickname: "F-Rogers",
   classname: "1PGM-a",
-  email: "frederick2.roegiers@arteveldehs.be",
+  email: "frederick.roegiers@arteveldehs.be",
   age: 33,
   avatar: "https://picsum.photos/536/354",
   motto: "I can be badass, sometimes I eject USB without removing safely",
@@ -34,7 +34,7 @@ const createStudent = async () => {
 };
 
 // declaration of the student, so we can update it later on
-const uuid = "44e05735-bdcc-43a3-954b-c8260a6e9c20";
+const uuid = "584f2a94-ac32-4be7-906c-57e86e57c1d8";
 
 // code to update a student
 const updateStudent = async () => {
@@ -55,14 +55,30 @@ const updateStudent = async () => {
   return updatedStudent;
 };
 
+// async met delete function
+// api aanspreken, fetch, met uuid
+// method: delete
+// headers waren niet nodig
+
+const deleteStudent = async () => {
+  const response = await fetch(API_URL + "/" + uuid, {
+    method: "DELETE",
+  });
+  const deletedStudent = await response.json();
+  return deleteStudent;
+};
+
 // initialisation
 const init = async () => {
   // create a student
   // const student = await createStudent();
   // console.log(student);
-
-  const updated = await updateStudent();
-  console.log(updated);
+  // update a student
+  // const updated = await updateStudent();
+  // console.log(updated);
+  // delete a student
+  const deleted = await deleteStudent();
+  console.log(deleted);
 };
 
 // start the application
